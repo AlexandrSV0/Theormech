@@ -61,7 +61,7 @@ L = Ekin - Epot
 ur1 = sp.diff(sp.diff(L, om_2), t) - sp.diff(L, tetta) - M
 ur2 = sp.diff(sp.diff(L, om), t) - sp.diff(L, phi)
 
-#выделение вторых производных (DV/dt и dom/dt) с использованием метода Крамера
+#вычисление вторых производных (DV/dt и dom/dt) с использованием метода Крамера
 a11 = ur1.coeff(sp.diff(om_2, t), 1)
 a12 = ur1.coeff(sp.diff(om, t), 1)
 a21 = ur2.coeff(sp.diff(om_2, t), 1)
